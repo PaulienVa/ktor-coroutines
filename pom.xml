@@ -104,7 +104,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>RecipeApplicationKt</mainClass>
+                    <mainClass>MainKt</mainClass>
                 </configuration>
             </plugin>
         </plugins>
