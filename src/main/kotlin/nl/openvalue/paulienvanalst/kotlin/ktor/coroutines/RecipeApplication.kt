@@ -1,6 +1,10 @@
 package nl.openvalue.paulienvanalst.kotlin.ktor.coroutines
 
+import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.application.*
+import io.ktor.features.*
+import io.ktor.jackson.*
+import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
@@ -14,5 +18,14 @@ fun main() {
 
 
 fun Application.recipes() {
-    println("Starting up!")
+    install(ContentNegotiation) {
+        jackson {
+            configure(SerializationFeature.INDENT_OUTPUT, true)
+        }
+    }
+
+    install(Routing) {
+        recipeEndpoint()
+    }
 }
+
