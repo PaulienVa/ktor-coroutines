@@ -120,6 +120,16 @@
             <artifactId>exposed-jdbc</artifactId>
             <version>0.31.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
     </dependencies>
 
 
@@ -164,7 +174,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>RecipeApplicationKt</mainClass>
+                    <mainClass>MainKt</mainClass>
                 </configuration>
             </plugin>
         </plugins>
