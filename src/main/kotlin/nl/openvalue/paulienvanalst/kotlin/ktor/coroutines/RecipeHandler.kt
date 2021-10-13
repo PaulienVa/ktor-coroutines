@@ -7,7 +7,7 @@ import io.ktor.routing.*
 fun Route.recipeEndpoint() {
     route("api/") {
         get("recipes/") {
-            val recipes = listOf(pancakes, scrambledEggs, fondue)
+            val recipes = RecipeRepository().getRecipes()
             call.respond(recipes)
         }
     }
